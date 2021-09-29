@@ -8,7 +8,16 @@
     -   [License](#license)
 -   [Step 1. Select Candidate Domains](#Step-1.-Select-Candidate-Domains)
 -   [Step 2. Crawling and Alignment](#Step-2.-Crawling-and-Alignment)
+    -   [Requirements](#Requirements)
+    -   [Necessary Resources](#Necessary-Resources)
+    -   [Configuration](#Configuration)
+    -   [Start Bitextor Pipeline](#Start-Bitextor-Pipeline)
+    -   [The Appending Filter](#The-Appending-Filter)
 -   [Step 3. Training and Evaluating NMT Models](#Step-3.-Training-and-Evaluating-NMT-Models)
+    -   [Setup & Preparation](#Setup-&-Preparation)
+    -   [Preprocessing](#Preprocessing)
+    -   [Training NMT](#Training-NMT)
+    -   [Evaluating NMT models](#Evaluating-NMT-Models)
 -   [NMT Models Comparison](#NMT-Models-Comparison)
 
 <!-- /TOC -->
@@ -213,7 +222,7 @@ bash nmt/expe14/src/enja/fairseq_nmt_pretrain_base_novalid_enja.sh
 bash nmt/expe14/src/enja/fairseq_nmt_pretrain_big_novalid_enja.sh
 ```
 
-### Evaluating NMT models
+### Evaluating NMT Models
 
 The datasets used for evaluation in our experiments are listed below.
 * [ASPEC](https://jipsti.jst.go.jp/aspec/), Asian Scientific Paper Excerpt Corpus
