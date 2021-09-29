@@ -1,0 +1,2 @@
+cut -d $'\t'  -f 3 /home/ubuntu/Laboro-ParaCorpus/nmt/expe14/corpus/laboro_v4_rb/Laboro_ParaCorpus_v4_rulebased_url_clean.txt > /home/ubuntu/Laboro-ParaCorpus/nmt/expe14/corpus/laboro_v4_rb/Laboro_ParaCorpus_v4.en &
+cut -d $'\t'  -f 4 /home/ubuntu/Laboro-ParaCorpus/nmt/expe14/corpus/laboro_v4_rb/Laboro_ParaCorpus_v4_rulebased_url_clean.txt > /home/ubuntu/Laboro-ParaCorpus/nmt/expe14/corpus/laboro_v4_rb/Laboro_ParaCorpus_v4.ja &
