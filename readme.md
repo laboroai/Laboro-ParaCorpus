@@ -57,10 +57,14 @@ We haven't published any paper on this work. Please cite this repository:
 ```
 
 ### License
-The parallel corpus itself is licensed under a 
 <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"><img alt="CC0" style="border-width:0" src="http://i.creativecommons.org/p/zero/1.0/88x31.png"/></a>
 
+The parallel corpus itself is licensed under a <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">Public Domain CC0 License</a>. You may use the corpus without restriction under copyright or database law, even for commercial use!
+
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a></br>
+
+The NMT models are licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.  
+For commercial use, please [contact Laboro.AI Inc.](https://laboro.ai/contact/other/)
 
 ## Step 1. Select Candidate Domains
 Please refer to the document [here](common_crawl/src).
