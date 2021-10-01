@@ -1,8 +1,8 @@
 #!/bin/sh
 
-SPM_MODELDIR=/home/ubuntu/Laboro-ParaCorpus/nmt/expe14/tokenizer/laboro_v4_rb_spm
-ORIG_CORPUSDIR=/home/ubuntu/Laboro-ParaCorpus/nmt/expe14/corpus/laboro_v4_rb
-SPM_CORPUSDIR=/home/ubuntu/Laboro-ParaCorpus/nmt/expe14/corpus/laboro_v4_rb_spm
+SPM_MODELDIR=/home/ubuntu/Laboro-ParaCorpus/nmt/expe1/tokenizer/spm
+ORIG_CORPUSDIR=/home/ubuntu/Laboro-ParaCorpus/nmt/expe1/corpus/Laboro-ParaCorpus
+SPM_CORPUSDIR=/home/ubuntu/Laboro-ParaCorpus/nmt/expe1/corpus/Laboro-ParaCorpus_spm
 
 mkdir -p $SPM_CORPUSDIR
 for L in en ja; do
@@ -15,5 +15,5 @@ for L in en ja; do
 done
 
 echo "filtering out sentences longer than 250........"
-python3 /home/ubuntu/Laboro_ParaCorpus/nmt/expe14/src/preprocess/len_filter.py $SPM_CORPUSDIR Laboro_ParaCorpus_v4
+python3 /home/ubuntu/Laboro_ParaCorpus/nmt/expe1/src/preprocess/len_filter.py $SPM_CORPUSDIR Laboro-ParaCorpus
 echo "finished filtering........"
