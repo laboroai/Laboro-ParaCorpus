@@ -35,13 +35,21 @@ In addition, in the last part of this document, we present the complete [BLEU sc
 
 ### Download
 
-[Parallel Corpus](∆)
+**Laboro-ParaCorpus**
 
-NMT models:  
-[base EN-JA](∆)  
-[base JA-EN](∆)  
-[large EN-JA](∆)   
-[large JA-EN](∆)
+[Laboro-ParaCorpus](∆)  
+[Base EN-JA](∆)  
+[Base JA-EN](∆)  
+[Big EN-JA](∆)   
+[Big JA-EN](∆)
+
+**Laboro-ParaCorpus+**
+
+[Laboro-ParaCorpus+](∆)  
+[Base EN-JA](∆)  
+[Base JA-EN](∆)  
+[Big EN-JA](∆)   
+[Big JA-EN](∆)
 
 ### To Cite This Work
 
@@ -160,26 +168,26 @@ To evaluate and compare the quality of the parallel corpora, we trained several 
 
 We used [sentencepiece](https://github.com/google/sentencepiece) to train the tokenizers, and then used [Fairseq](https://github.com/pytorch/fairseq) as the tool to train and evaluate NMT models based on the parallel corpus we created.
 
-All scripts related to training and evaluating NMT models are placed in `./nmt/expe14` folder. We recommend to create a new experiment folder every time a NMT model is trained on a new corpus. Please place the original corpus into `./nmt/expe14/corpus/[name_of_the_corpus]/`, and then use the following scripts to split it into English and Japanese corpora and train tokenizers.
+All scripts related to training and evaluating NMT models are placed in `./nmt/expe1` folder. We recommend to create a new experiment folder every time a NMT model is trained on a new corpus. Please place the original corpus into `./nmt/expe1/corpus/[name_of_the_corpus]/`, and then use the following scripts to split it into English and Japanese corpora and train tokenizers.
 
 ```bash
 # split the corpus into English and Japanese plain text
-bash nmt/expe14/src/preprocess/split_text.sh
+bash nmt/expe1/src/preprocess/split_text.sh
 
 # train tokenizers
-bash nmt/expe14/src/preprocess/train_tokenizer.sh
+bash nmt/expe1/src/preprocess/train_tokenizer.sh
 ```
 
 After the steps above, the experiment folder will be ready for training NMT models, and it should contain files as shown below. The original corpus won't be used again for NMT training and evaluation, so it's OK to delete the file to save some storage space.
 
 ```txt
 ├── corpus
-│   └── laboro_v4_rb
-│       ├── Laboro_ParaCorpus_v4.en
-│       ├── Laboro_ParaCorpus_v4.ja
-│       └── Laboro_ParaCorpus_v4_rulebased_url_clean.txt
+│   └── Laboro-ParaCorpus
+│       ├── Laboro-ParaCorpus.en
+│       ├── Laboro-ParaCorpus.ja
+│       └── Laboro-ParaCorpus.txt
 ├── tokenizer
-│   └── laboro_v4_rb_spm
+│   └── spm
 │       ├── spm.en.model
 │       ├── spm.en.vocab
 │       ├── spm.ja.model
@@ -197,33 +205,33 @@ After the steps above, the experiment folder will be ready for training NMT mode
 
 ```bash
 # tokenize and length filter training dataset
-bash nmt/expe14/src/preprocess/preprocess_train_dataset.sh
+bash nmt/expe1/src/preprocess/preprocess_train_dataset.sh
 
 # generate dummy validation corpus
-echo en > nmt/expe14/corpus/dummy/dummy.en
-echo ja > nmt/expe14/corpus/dummy/dummy.ja
+echo en > nmt/expe1/corpus/dummy/dummy.en
+echo ja > nmt/expe1/corpus/dummy/dummy.ja
 ```
 
 ### Training NMT
 
 ```bash
 # JA-EN fairseq preprocess train and dummy valid datasets
-bash nmt/expe14/src/jaen/preprocess_fairseq_jaen_novalid.sh
+bash nmt/expe1/src/jaen/preprocess_fairseq_jaen_novalid.sh
 
 # EN-JA fairseq preprocess train and dummy valid datasets
-bash nmt/expe14/src/jaen/preprocess_fairseq_jaen_novalid.sh
+bash nmt/expe1/src/jaen/preprocess_fairseq_jaen_novalid.sh
 
 # JA-EN base model training
-bash nmt/expe14/src/jaen/fairseq_nmt_pretrain_base_novalid_jaen.sh
+bash nmt/expe1/src/jaen/fairseq_nmt_pretrain_base_novalid_jaen.sh
 
 # JA-EN big model training
-bash nmt/expe14/src/jaen/fairseq_nmt_pretrain_big_novalid_jaen.sh
+bash nmt/expe1/src/jaen/fairseq_nmt_pretrain_big_novalid_jaen.sh
 
 # EN-JA base model training
-bash nmt/expe14/src/enja/fairseq_nmt_pretrain_base_novalid_enja.sh
+bash nmt/expe1/src/enja/fairseq_nmt_pretrain_base_novalid_enja.sh
 
 # EN-JA big model training
-bash nmt/expe14/src/enja/fairseq_nmt_pretrain_big_novalid_enja.sh
+bash nmt/expe1/src/enja/fairseq_nmt_pretrain_big_novalid_enja.sh
 ```
 
 ### Evaluating NMT Models
@@ -241,40 +249,40 @@ To create the test split for each dataset, please take a look at [this jupyter n
 
 ```bash
 # tokenize and length filter testing datasets
-bash nmt/expe14/src/preprocess/preprocess_test_dataset.sh
+bash nmt/expe1/src/preprocess/preprocess_test_dataset.sh
 
 # JA-EN fairseq preprocess test datasets
-bash nmt/expe14/src/jaen/preprocess_fairseq_test_jaen.sh
+bash nmt/expe1/src/jaen/preprocess_fairseq_test_jaen.sh
 
 # EN-JA fairseq preprocess test datasets
-bash nmt/expe14/src/enja/preprocess_fairseq_test_enja.sh
+bash nmt/expe1/src/enja/preprocess_fairseq_test_enja.sh
 ```
 
 Run the following scripts to evaluate corresponding model on all 7 datasets. The results will be placed in `./nmt/results/` folder.
 ```bash
 # JA-EN base model evaluation
-bash nmt/expe14/src/jaen/fairseq_nmt_generate_evaluate_jaen.sh
+bash nmt/expe1/src/jaen/fairseq_nmt_generate_evaluate_jaen.sh
 
 # JA-EN big model evaluation
-bash nmt/expe14/src/jaen/fairseq_nmt_generate_evaluate_jaen_big.sh
+bash nmt/expe1/src/jaen/fairseq_nmt_generate_evaluate_jaen_big.sh
 
 # EN-JA base model evaluation
-bash nmt/expe14/src/enja/fairseq_nmt_generate_evaluate_enja.sh
+bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja.sh
 
 # EN-JA big model evaluation
-bash nmt/expe14/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
+bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
 ```
 
 ## NMT Models Comparison
 <table>
-    <caption>information of the corpora</caption>
+    <caption>Information of the Corpora</caption>
     <thead>
         <tr>
             <th width=120>Corpus</th>
             <th colspan=2 width=180>NTT-JParaCrawl</th>
             <th colspan=2 width=180>Laboro-ParaCorpus</th>
-            <th colspan=2 width=180>Combination 1 *1</th>
-            <th colspan=2 width=180>Combination 2 *2</th>
+            <th colspan=2 width=180>Laboro-ParaCorpus+</th>
+            <th colspan=2 width=180>Laboro-ParaCorpus-NTT</th>
         </tr>
     </thead>
     <tbody>
@@ -311,9 +319,9 @@ bash nmt/expe14/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <th width=120>Model</th>
             <th colspan=2 width=180>NTT-JParaCrawl</th>
             <th colspan=2 width=180>Laboro-ParaCorpus</th>
-            <th colspan=2 width=180>Combination 1 *1</th>
-            <th colspan=2 width=180>Combination 2 *2</th>
-            <th width=100>Google Cloud</br>Translation</th>
+            <th colspan=2 width=180>CLaboro-ParaCorpus+</th>
+            <th colspan=2 width=180>Laboro-ParaCorpus-NTT</th>
+            <th width=100>Google Cloud</br>Translate</th>
         </tr>
     </thead>
     <tbody>
@@ -423,9 +431,9 @@ bash nmt/expe14/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <th width=120>Model</th>
             <th colspan=2 width=180>NTT-JParaCrawl</th>
             <th colspan=2 width=180>Laboro-ParaCorpus</th>
-            <th colspan=2 width=180>Combination 1 *1</th>
-            <th colspan=2 width=180>Combination 2 *2</th>
-            <th width=100>Google Cloud</br>Translation</th>
+            <th colspan=2 width=180>Laboro-ParaCorpus+</th>
+            <th colspan=2 width=180>Laboro-ParaCorpus-NTT</th>
+            <th width=100>Google Cloud</br>Translate</th>
         </tr>
     </thead>
     <tbody>
@@ -535,9 +543,9 @@ bash nmt/expe14/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <th width=120>Model</th>
             <th colspan=2 width=180>NTT-JParaCrawl</th>
             <th colspan=2 width=180>Laboro-ParaCorpus</th>
-            <th colspan=2 width=180>Combination 1 *1</th>
-            <th colspan=2 width=180>Combination 2 *2</th>
-            <th width=100>Google Cloud</br>Translation</th>
+            <th colspan=2 width=180>Laboro-ParaCorpus+</th>
+            <th colspan=2 width=180>Laboro-ParaCorpus-NTT</th>
+            <th width=100>Google Cloud</br>Translate</th>
         </tr>
     </thead>
     <tbody>
@@ -647,9 +655,9 @@ bash nmt/expe14/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <th width=120>Model</th>
             <th colspan=2 width=180>NTT-JParaCrawl</th>
             <th colspan=2 width=180>Laboro-ParaCorpus</th>
-            <th colspan=2 width=180>Combination 1 *1</th>
-            <th colspan=2 width=180>Combination 2 *2</th>
-            <th width=100>Google Cloud</br>Translation</th>
+            <th colspan=2 width=180>CLaboro-ParaCorpus+</th>
+            <th colspan=2 width=180>Laboro-ParaCorpus-NTT</th>
+            <th width=100>Google Cloud</br>Translate</th>
         </tr>
     </thead>
     <tbody>
