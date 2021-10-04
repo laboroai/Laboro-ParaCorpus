@@ -12,7 +12,7 @@ for dataset in aspec bsd duo iwslt jesc kftt ttb; do
     mkdir -p $CORPUS_DIR/$EXP_NAME
     DATA_DIR=$CORPUS_DIR/$EXP_NAME
 
-    DICT_DIR=/home/ubuntu/Laboro-ParaCorpus/nmt/expe1/corpus/laboro_fairseq_novalid_${SRC}${TRG}
+    DICT_DIR=/home/ubuntu/Laboro-ParaCorpus/nmt/expe1/model/laboro_base_${SRC}${TRG}
     cp $DICT_DIR/dict.* $DATA_DIR/
     SRC_VOCAB=$DATA_DIR/dict.${SRC}.txt
     TRG_VOCAB=$DATA_DIR/dict.${TRG}.txt

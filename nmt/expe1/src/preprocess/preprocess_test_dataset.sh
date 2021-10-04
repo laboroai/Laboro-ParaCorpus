@@ -2,9 +2,9 @@
 
 for dataset in aspec bsd duo iwslt jesc kftt ttb; do
 
-    SPM_MODELDIR=/home/ubuntu/nmt/expe1/tokenizer/spm
-    ORIG_CORPUSDIR=/home/ubuntu/nmt/expe1/corpus/${dataset}
-    SPM_CORPUSDIR=/home/ubuntu/nmt/expe1/corpus/${dataset}_test_spm
+    SPM_MODELDIR=/home/ubuntu/Laboro-ParaCorpus/nmt/expe1/tokenizer/spm
+    ORIG_CORPUSDIR=/home/ubuntu/Laboro-ParaCorpus/nmt/expe1/corpus/${dataset}
+    SPM_CORPUSDIR=/home/ubuntu/Laboro-ParaCorpus/nmt/expe1/corpus/${dataset}_test_spm
 
     mkdir -p $SPM_CORPUSDIR
     for L in en ja; do
@@ -17,6 +17,6 @@ for dataset in aspec bsd duo iwslt jesc kftt ttb; do
     done
 
     echo "filtering out sentences longer than 250........"
-    python3 /home/ubuntu/nmt/expe1/src/preprocess/len_filter.py $SPM_CORPUSDIR test
+    python3 /home/ubuntu/Laboro-ParaCorpus/nmt/expe1/src/preprocess/len_filter.py $SPM_CORPUSDIR test
     echo "finished filtering........"
 done

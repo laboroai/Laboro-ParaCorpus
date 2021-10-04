@@ -215,7 +215,7 @@ echo ja > nmt/expe1/corpus/dummy/dummy.ja
 
 ### Training NMT
 
-To reproduce our experiment, it is neccesary to adjust the `--update-freq` argument in scripts `./nmt/expe1/src/jaen/fairseq_nmt_pretrain_[model-size]_novalid_[direction].sh`. 
+To directly use our models for inference, please skip this step. To reproduce our experiment, it is neccesary to adjust the `--update-freq` argument in scripts `./nmt/expe1/src/jaen/fairseq_nmt_pretrain_[model-size]_novalid_[direction].sh`. 
 
 For pre-training base models,
 
