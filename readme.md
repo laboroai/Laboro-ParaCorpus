@@ -264,7 +264,7 @@ The datasets used for evaluation in our experiments are listed below.
 * [Tatoeba](https://tatoeba.org/) corpus, a large collection of multilingual sentences and translations that keeps being updated by voluntary contributors; [release v20190709](https://opus.nlpl.eu/Tatoeba-v20190709.php) is used in our experiment
 * [BSD](https://github.com/tsuruoka-lab/BSD), Business Scene Dialogue corpus containing Japanese-English business conversations
 
-To create the test split for each dataset, please take a look at [this jupyter notebook](nmt/src/preprocess/create_splits_for_test_datasets.ipynb). And then preprocess the datasets in a similar way as training dataset.
+To create the test split for each dataset, please take a look at [this jupyter notebook](nmt/expe1/src/preprocess/create_splits_for_test_datasets.ipynb). And then preprocess the datasets in a similar way as training dataset.
 
 ```bash
 # tokenize and length filter testing datasets
