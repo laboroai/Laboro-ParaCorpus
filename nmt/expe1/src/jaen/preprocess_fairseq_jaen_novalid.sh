@@ -4,7 +4,7 @@ SRC=ja
 TRG=en
 EXP_NAME=laboro_fairseq_novalid_${SRC}${TRG}
 
-CORPUS_DIR=/home/ubuntu/nmt/expe1/corpus
+CORPUS_DIR=/home/ubuntu/Laboro-ParaCorpus/nmt/expe1/corpus
 
 TRAIN_SPM_CORPUSDIR=$CORPUS_DIR/Laboro-ParaCorpus_spm
 TRAIN_SPM_SRC=$TRAIN_SPM_CORPUSDIR/Laboro-ParaCorpus_len_filtered.${SRC}

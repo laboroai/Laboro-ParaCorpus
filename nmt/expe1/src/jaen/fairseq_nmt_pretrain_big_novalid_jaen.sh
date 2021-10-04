@@ -1,12 +1,12 @@
 # big model
 
-CORPUS_DIR=/home/ubuntu/nmt/expe1/corpus
+CORPUS_DIR=/home/ubuntu/Laboro-ParaCorpus/nmt/expe1/corpus
 SRC=ja
 TRG=en
 EXP_NAME=laboro_fairseq_novalid_${SRC}${TRG}
 DATA_DIR=$CORPUS_DIR/$EXP_NAME
 
-MODEL_DIR=/home/ubuntu/nmt/expe1/model/laboro_big_${SRC}${TRG}
+MODEL_DIR=/home/ubuntu/Laboro-ParaCorpus/nmt/expe1/model/laboro_big_${SRC}${TRG}
 mkdir -p $MODEL_DIR
 
 CUDA_VISIBLE_DEVICES=0,1,2,3 fairseq-train $DATA_DIR \
