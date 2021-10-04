@@ -1,2 +1,2 @@
-cut -d $'\t'  -f 1 /home/ubuntu/Laboro-ParaCorpus/nmt/expe1/corpus/Laboro-ParaCorpus/Laboro_ParaCorpus.txt > /home/ubuntu/Laboro-ParaCorpus/nmt/expe1/corpus/Laboro-ParaCorpus/Laboro_ParaCorpus.en &
-cut -d $'\t'  -f 2 /home/ubuntu/Laboro-ParaCorpus/nmt/expe1/corpus/Laboro-ParaCorpus/Laboro_ParaCorpus.txt > /home/ubuntu/Laboro-ParaCorpus/nmt/expe1/corpus/Laboro-ParaCorpus/Laboro_ParaCorpus.ja &
+cut -d $'\t'  -f 1 /home/ubuntu/Laboro-ParaCorpus/nmt/expe1/corpus/Laboro-ParaCorpus/Laboro-ParaCorpus.txt > /home/ubuntu/Laboro-ParaCorpus/nmt/expe1/corpus/Laboro-ParaCorpus/Laboro-ParaCorpus.en &
+cut -d $'\t'  -f 2 /home/ubuntu/Laboro-ParaCorpus/nmt/expe1/corpus/Laboro-ParaCorpus/Laboro-ParaCorpus.txt > /home/ubuntu/Laboro-ParaCorpus/nmt/expe1/corpus/Laboro-ParaCorpus/Laboro-ParaCorpus.ja &
