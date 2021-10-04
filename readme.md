@@ -215,6 +215,24 @@ echo ja > nmt/expe1/corpus/dummy/dummy.ja
 
 ### Training NMT
 
+To reproduce our experiment, it is neccesary to adjust the `--update-freq` argument in scripts `./nmt/expe1/src/jaen/fairseq_nmt_pretrain_[model-size]_novalid_[direction].sh`. 
+
+For pre-training base models,
+
+| # GPU | --update-freq |
+|-|-|
+| 2 | 32 |
+| 4 (default) | 16 |
+| 8 | 8 |
+
+For pre-training big models,
+
+| # GPU | --update-freq |
+|-|-|
+| 2 | 80 |
+| 4 (default) | 40 |
+| 8 | 20 |
+
 ```bash
 # JA-EN fairseq preprocess train and dummy valid datasets
 bash nmt/expe1/src/jaen/preprocess_fairseq_jaen_novalid.sh
