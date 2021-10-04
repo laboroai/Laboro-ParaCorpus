@@ -319,7 +319,7 @@ bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <th width=120>Model</th>
             <th colspan=2 width=180>NTT-JParaCrawl</th>
             <th colspan=2 width=180>Laboro-ParaCorpus</th>
-            <th colspan=2 width=180>CLaboro-ParaCorpus+</th>
+            <th colspan=2 width=180>Laboro-ParaCorpus+</th>
             <th colspan=2 width=180>Laboro-ParaCorpus-NTT</th>
             <th width=100>Google Cloud</br>Translate</th>
         </tr>
@@ -344,7 +344,7 @@ bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <td>17.9</td>
             <td>29.4</td>
             <td>17.9</td>
-            <td></td>
+            <td>29.5</td>
             <td>18.0</td>
             <td>29.9</td>
             <td>23.1</td>
@@ -356,7 +356,7 @@ bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <td>5.9</td>
             <td>11.9</td>
             <td>6.2</td>
-            <td></td>
+            <td>12.4</td>
             <td>6.5</td>
             <td>12.3</td>
             <td>7.9</td>
@@ -368,7 +368,7 @@ bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <td>14.2</td>
             <td>27.6</td>
             <td>14.2</td>
-            <td></td>
+            <td>27.7</td>
             <td>15.0</td>
             <td>28.8</td>
             <td>14.9</td>
@@ -380,7 +380,7 @@ bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <td>10.5</td>
             <td>13.6</td>
             <td>10.2</td>
-            <td></td>
+            <td>14.0</td>
             <td>11.3</td>
             <td>13.9</td>
             <td>14.8</td>
@@ -456,7 +456,7 @@ bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <td>18.8</td>
             <td>30.8</td>
             <td>18.7</td>
-            <td></td>
+            <td>30.9</td>
             <td>20.2</td>
             <td>31.2</td>
             <td>23.1</td>
@@ -468,7 +468,7 @@ bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <td>6.0</td>
             <td>13.1</td>
             <td>6.3</td>
-            <td></td>
+            <td>12.9</td>
             <td>6.6</td>
             <td>13.8</td>
             <td>7.9</td>
@@ -480,7 +480,7 @@ bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <td>15.9</td>
             <td>29.5</td>
             <td>15.9</td>
-            <td></td>
+            <td>29.1</td>
             <td>17.3</td>
             <td>29.7</td>
             <td>14.9</td>
@@ -492,7 +492,7 @@ bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <td>11.0</td>
             <td>13.8</td>
             <td>11.0</td>
-            <td></td>
+            <td>14.2</td>
             <td>12.3</td>
             <td>14.2</td>
             <td>14.8</td>
@@ -568,7 +568,7 @@ bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <td>20.3</td>
             <td>29.8</td>
             <td>20.0</td>
-            <td></td>
+            <td>30.0</td>
             <td>20.3</td>
             <td>30.2</td>
             <td>24.6</td>
@@ -580,7 +580,7 @@ bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <td>7.0</td>
             <td>17.7</td>
             <td>7.6</td>
-            <td></td>
+            <td>17.6</td>
             <td>7.6</td>
             <td>18.9</td>
             <td>7.8</td>
@@ -592,7 +592,7 @@ bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <td>14.5</td>
             <td>26.4</td>
             <td>14.6</td>
-            <td></td>
+            <td>26.4</td>
             <td>15.6</td>
             <td>26.7</td>
             <td>19.1</td>
@@ -604,7 +604,7 @@ bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <td>12.0</td>
             <td>18.0</td>
             <td>12.2</td>
-            <td></td>
+            <td>18.1</td>
             <td>12.1</td>
             <td>18.1</td>
             <td>13.1</td>
@@ -655,7 +655,7 @@ bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <th width=120>Model</th>
             <th colspan=2 width=180>NTT-JParaCrawl</th>
             <th colspan=2 width=180>Laboro-ParaCorpus</th>
-            <th colspan=2 width=180>CLaboro-ParaCorpus+</th>
+            <th colspan=2 width=180>Laboro-ParaCorpus+</th>
             <th colspan=2 width=180>Laboro-ParaCorpus-NTT</th>
             <th width=100>Google Cloud</br>Translate</th>
         </tr>
@@ -680,7 +680,7 @@ bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <td>19.9</td>
             <td>30.7</td>
             <td>20.3</td>
-            <td></td>
+            <td>30.2</td>
             <td>20.6</td>
             <td>30.9</td>
             <td>24.6</td>
@@ -692,7 +692,7 @@ bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <td>7.6</td>
             <td>18.4</td>
             <td>8.3</td>
-            <td></td>
+            <td>19.0</td>
             <td>8.5</td>
             <td>19.4</td>
             <td>7.8</td>
@@ -704,7 +704,7 @@ bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <td>15.4</td>
             <td>26.5</td>
             <td>16.1</td>
-            <td></td>
+            <td>26.8</td>
             <td>17.5</td>
             <td>27.5</td>
             <td>19.1</td>
@@ -716,7 +716,7 @@ bash nmt/expe1/src/enja/fairseq_nmt_generate_evaluate_enja_big.sh
             <td>13.0</td>
             <td>18.6</td>
             <td>13.3</td>
-            <td></td>
+            <td>18.8</td>
             <td>13.6</td>
             <td>19.0</td>
             <td>13.1</td>
