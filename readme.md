@@ -168,14 +168,14 @@ To evaluate and compare the quality of the parallel corpora, we trained several 
 
 We used [sentencepiece](https://github.com/google/sentencepiece) to train the tokenizers, and then used [Fairseq](https://github.com/pytorch/fairseq) as the tool to train and evaluate NMT models based on the parallel corpus we created.
 
-All scripts related to training and evaluating NMT models are placed in `./nmt/expe1` folder. We recommend to create a new experiment folder every time a NMT model is trained on a new corpus. Please place the original corpus into `./nmt/expe1/corpus/[name_of_the_corpus]/`, and then use the following scripts to split it into English and Japanese corpora and train tokenizers.
+All scripts related to training and evaluating NMT models are placed in `./nmt/expe1` folder. We recommend to create a new experiment folder every time a NMT model is trained on a new corpus. Please place the original corpus into `./nmt/expe1/corpus/[name_of_the_corpus]/`, and then use the following scripts to split it into English and Japanese corpora. Laboro-ParaCorpus comes with tokenizers, so you don't have to train them again, although we also provide the script for training `sentencepiece` tokenizers for your own parallel corpus.
 
 ```bash
 # split the corpus into English and Japanese plain text
 bash nmt/expe1/src/preprocess/split_text.sh
 
-# train tokenizers
-bash nmt/expe1/src/preprocess/train_tokenizer.sh
+# train tokenizers if needed
+# bash nmt/expe1/src/preprocess/train_tokenizer.sh
 ```
 
 After the steps above, the experiment folder will be ready for training NMT models, and it should contain files as shown below. The original corpus won't be used again for NMT training and evaluation, so it's OK to delete the file to save some storage space.
