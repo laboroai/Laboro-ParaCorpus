@@ -15,5 +15,5 @@ for L in en ja; do
 done
 
 echo "filtering out sentences longer than 250........"
-python3 /home/ubuntu/Laboro_ParaCorpus/nmt/expe1/src/preprocess/len_filter.py $SPM_CORPUSDIR Laboro-ParaCorpus
+python3 /home/ubuntu/Laboro-ParaCorpus/nmt/expe1/src/preprocess/len_filter.py $SPM_CORPUSDIR Laboro-ParaCorpus
 echo "finished filtering........"

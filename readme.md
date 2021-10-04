@@ -208,6 +208,7 @@ After the steps above, the experiment folder will be ready for training NMT mode
 bash nmt/expe1/src/preprocess/preprocess_train_dataset.sh
 
 # generate dummy validation corpus
+mkdir -p nmt/expe1/corpus/dummy
 echo en > nmt/expe1/corpus/dummy/dummy.en
 echo ja > nmt/expe1/corpus/dummy/dummy.ja
 ```
