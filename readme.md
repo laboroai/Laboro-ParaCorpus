@@ -220,7 +220,7 @@ echo ja > nmt/expe1/corpus/dummy/dummy.ja
 bash nmt/expe1/src/jaen/preprocess_fairseq_jaen_novalid.sh
 
 # EN-JA fairseq preprocess train and dummy valid datasets
-bash nmt/expe1/src/jaen/preprocess_fairseq_jaen_novalid.sh
+bash nmt/expe1/src/jaen/preprocess_fairseq_enja_novalid.sh
 
 # JA-EN base model training
 bash nmt/expe1/src/jaen/fairseq_nmt_pretrain_base_novalid_jaen.sh
