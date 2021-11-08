@@ -37,19 +37,19 @@ In addition, in the last part of this document, we present the complete [BLEU sc
 
 **Laboro-ParaCorpus**
 
-[Laboro-ParaCorpus](∆)  
-[Base EN-JA](∆)  
-[Base JA-EN](∆)  
-[Big EN-JA](∆)   
-[Big JA-EN](∆)
+[Laboro-ParaCorpus](http://assets.laboro.ai.s3.amazonaws.com/laboroparacorpus/Laboro-ParaCorpus.zip)  
+[Base EN-JA](http://assets.laboro.ai.s3.amazonaws.com/laboroparacorpus/laboro_base_enja.zip)  
+[Base JA-EN](http://assets.laboro.ai.s3.amazonaws.com/laboroparacorpus/laboro_base_jaen.zip)  
+[Big EN-JA](http://assets.laboro.ai.s3.amazonaws.com/laboroparacorpus/laboro_big_enja.zip)   
+[Big JA-EN](http://assets.laboro.ai.s3.amazonaws.com/laboroparacorpus/laboro_big_jaen.zip)
 
 **Laboro-ParaCorpus+**
 
-[Laboro-ParaCorpus+](∆)  
-[Base EN-JA](∆)  
-[Base JA-EN](∆)  
-[Big EN-JA](∆)   
-[Big JA-EN](∆)
+[Laboro-ParaCorpus+](http://assets.laboro.ai.s3.amazonaws.com/laboroparacorpus/Laboro-ParaCorpus-Plus.zip)  
+[Base EN-JA](http://assets.laboro.ai.s3.amazonaws.com/laboroparacorpus/laboro_plus_base_enja.zip)  
+[Base JA-EN](http://assets.laboro.ai.s3.amazonaws.com/laboroparacorpus/laboro_plus_base_jaen.zip)  
+[Big EN-JA](http://assets.laboro.ai.s3.amazonaws.com/laboroparacorpus/laboro_plus_big_enja.zip)   
+[Big JA-EN](http://assets.laboro.ai.s3.amazonaws.com/laboroparacorpus/laboro_plus_big_jaen.zip)
 
 ### To Cite This Work
 
