@@ -24,7 +24,7 @@
 
 ## Introduction
 
-We are happy to announce that we've made public our web-based English-Japanese parallel corpus. More information on how we created the corpus can be found in [this article](∆). The document here mainly focuses on the implementation.
+We are happy to announce that we've made public our web-based English-Japanese parallel corpus. More information on how we created the corpus can be found in [this article](https://laboro.ai/activity/column/engineer/a-new-japanese-english-parallel-corpus/). The document here mainly focuses on the implementation.
 
 To reproduce our experiments, please follow three steps,
 1.  [select candidate domains](#select-candidate-domains) for crawling the web
